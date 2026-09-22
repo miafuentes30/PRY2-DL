@@ -1,0 +1,47 @@
+{
+  "model": "C:\\Users\\miafu\\Downloads\\PRY2-DL\\P2\\runs\\qrdqn_space_invaders_v1\\evaluation\\best_model.zip",
+  "environment": "ALE/SpaceInvaders-v5",
+  "episodes": [
+    {
+      "episode": 1,
+      "seed": 2026,
+      "score": 605.0,
+      "steps": 1039,
+      "natural_end": true
+    },
+    {
+      "episode": 2,
+      "seed": 2027,
+      "score": 960.0,
+      "steps": 1171,
+      "natural_end": true
+    },
+    {
+      "episode": 3,
+      "seed": 2028,
+      "score": 475.0,
+      "steps": 896,
+      "natural_end": true
+    },
+    {
+      "episode": 4,
+      "seed": 2029,
+      "score": 575.0,
+      "steps": 1035,
+      "natural_end": true
+    },
+    {
+      "episode": 5,
+      "seed": 2030,
+      "score": 390.0,
+      "steps": 687,
+      "natural_end": true
+    }
+  ],
+  "best_score": 960.0,
+  "mean_score": 601.0,
+  "std_score": 194.92049661336284,
+  "video": "videos\\evaluacion_final\\space_invaders_best_episode.mp4",
+  "video_seed": 2027,
+  "video_replay_score": 960.0
+}

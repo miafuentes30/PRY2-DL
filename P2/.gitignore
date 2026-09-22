@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+runs/
+models/*.zip
+videos/*.mp4
+results/
+.ipynb_checkpoints/
+

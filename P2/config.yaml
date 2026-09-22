@@ -1,0 +1,44 @@
+experiment:
+  name: qrdqn_space_invaders_v1
+  seed: 42
+  total_timesteps: 10000000
+  device: auto
+
+environment:
+  id: ALE/SpaceInvaders-v5
+  num_envs: 8
+  frame_skip: 4
+  frame_stack: 4
+  screen_size: 84
+  repeat_action_probability: 0.25
+  terminal_on_life_loss_train: true
+  clip_reward_train: true
+  full_action_space: false
+
+algorithm:
+  learning_rate: 0.00005
+  buffer_size: 100000
+  learning_starts: 80000
+  batch_size: 32
+  gamma: 0.99
+  train_freq: 4
+  gradient_steps: 1
+  n_steps: 3
+  target_update_interval: 10000
+  exploration_fraction: 0.10
+  exploration_initial_eps: 1.0
+  exploration_final_eps: 0.01
+  n_quantiles: 200
+  max_grad_norm: 10.0
+  optimize_memory_usage: false
+
+evaluation:
+  frequency: 100000
+  episodes: 5
+  max_steps_per_episode: 30000
+  deterministic: true
+
+checkpoint:
+  frequency: 250000
+  save_replay_buffer: false
+

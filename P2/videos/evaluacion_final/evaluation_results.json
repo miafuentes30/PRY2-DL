@@ -7,40 +7,94 @@
       "seed": 2026,
       "score": 605.0,
       "steps": 1039,
-      "natural_end": true
+      "natural_end": true,
+      "shooting_actions": 910,
+      "shooting_rate": 87.58421559191531,
+      "action_counts": {
+        "NOOP": 5,
+        "FIRE": 6,
+        "RIGHT": 62,
+        "LEFT": 62,
+        "RIGHTFIRE": 421,
+        "LEFTFIRE": 483
+      }
     },
     {
       "episode": 2,
       "seed": 2027,
       "score": 960.0,
       "steps": 1171,
-      "natural_end": true
+      "natural_end": true,
+      "shooting_actions": 1046,
+      "shooting_rate": 89.32536293766013,
+      "action_counts": {
+        "NOOP": 4,
+        "FIRE": 5,
+        "RIGHT": 38,
+        "LEFT": 83,
+        "RIGHTFIRE": 530,
+        "LEFTFIRE": 511
+      }
     },
     {
       "episode": 3,
       "seed": 2028,
       "score": 475.0,
       "steps": 896,
-      "natural_end": true
+      "natural_end": true,
+      "shooting_actions": 774,
+      "shooting_rate": 86.38392857142857,
+      "action_counts": {
+        "NOOP": 4,
+        "FIRE": 11,
+        "RIGHT": 54,
+        "LEFT": 64,
+        "RIGHTFIRE": 407,
+        "LEFTFIRE": 356
+      }
     },
     {
       "episode": 4,
       "seed": 2029,
       "score": 575.0,
       "steps": 1035,
-      "natural_end": true
+      "natural_end": true,
+      "shooting_actions": 897,
+      "shooting_rate": 86.66666666666667,
+      "action_counts": {
+        "NOOP": 11,
+        "FIRE": 12,
+        "RIGHT": 30,
+        "LEFT": 97,
+        "RIGHTFIRE": 435,
+        "LEFTFIRE": 450
+      }
     },
     {
       "episode": 5,
       "seed": 2030,
       "score": 390.0,
       "steps": 687,
-      "natural_end": true
+      "natural_end": true,
+      "shooting_actions": 580,
+      "shooting_rate": 84.4250363901019,
+      "action_counts": {
+        "NOOP": 4,
+        "FIRE": 4,
+        "RIGHT": 40,
+        "LEFT": 63,
+        "RIGHTFIRE": 293,
+        "LEFTFIRE": 283
+      }
     }
   ],
   "best_score": 960.0,
   "mean_score": 601.0,
   "std_score": 194.92049661336284,
+  "total_steps": 4828,
+  "total_shooting_actions": 4207,
+  "overall_shooting_rate": 87.13753106876554,
+  "best_seed": 2027,
   "video": "videos\\evaluacion_final\\space_invaders_best_episode.mp4",
   "video_seed": 2027,
   "video_replay_score": 960.0

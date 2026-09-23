@@ -1,0 +1,89 @@
+experiment:
+  name: qrdqn_space_invaders_v2
+  seed: 123
+  total_timesteps: 15000000
+  device: auto
+
+environment:
+  id: ALE/SpaceInvaders-v5
+
+  # Menos procesos simultáneos.
+  # 4 suele ser un punto más estable en equipos con RAM limitada.
+  num_envs: 4
+
+  # Se mantiene el preprocessing usado por el modelo original.
+  frame_skip: 4
+  frame_stack: 4
+  screen_size: 84
+
+  # Mantenerlo igual a la configuración original.
+  repeat_action_probability: 0.25
+
+  # Perder una vida se trata como terminal durante entrenamiento.
+  terminal_on_life_loss_train: true
+
+  # Estabiliza el aprendizaje.
+  clip_reward_train: true
+
+  # Mantiene solamente las 6 acciones útiles:
+  # NOOP, FIRE, RIGHT, LEFT, RIGHTFIRE, LEFTFIRE
+  full_action_space: false
+
+algorithm:
+
+  # LR conservador para Atari.
+  learning_rate: 0.00005
+
+  # V1 = 100000.
+  # Lo reducimos debido al consumo de memoria detectado.
+  buffer_size: 50000
+
+  # Comenzamos a aprender cuando ya existe variedad suficiente.
+  learning_starts: 50000
+
+  batch_size: 32
+
+  gamma: 0.99
+
+  train_freq: 4
+  gradient_steps: 1
+
+  # Retorno multi-step.
+  n_steps: 3
+
+  target_update_interval: 10000
+
+  # V1 llegaba muy rápido a epsilon bajo.
+  # En V2 damos más tiempo a la exploración.
+  exploration_fraction: 0.20
+
+  exploration_initial_eps: 1.0
+
+  # Un poco más de exploración residual.
+  exploration_final_eps: 0.02
+
+  n_quantiles: 200
+
+  max_grad_norm: 10.0
+
+  optimize_memory_usage: false
+
+evaluation:
+
+  # Evaluar frecuentemente para no perder un buen checkpoint.
+  frequency: 100000
+
+  # Coincide con la competencia.
+  episodes: 5
+
+  max_steps_per_episode: 30000
+
+  deterministic: true
+
+checkpoint:
+
+  # Respaldo cada medio millón de pasos.
+  frequency: 500000
+
+  # No guardar replay buffer porque consume demasiado espacio/RAM.
+  save_replay_buffer: false
